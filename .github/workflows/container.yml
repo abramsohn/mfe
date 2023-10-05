@@ -13,14 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14" # Adjust the Node.js version as needed
+          node-version: "18"
 
       - name: Install dependencies
         run: npm install
@@ -38,6 +37,3 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           SOURCE_DIR: "packages/container/dist"
           DEST_BUCKET: ${{ secrets.AWS_S3_BUCKET_NAME }}/container/latest
-=======
-      - uses: actions/checkout@v2
->>>>>>> 190214cb378fbf8694d05d9871e4a7db607cc49f
